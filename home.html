@@ -28,7 +28,7 @@
 
   <body id="home">
 
-    {% spaceless %}
+
     <div class="imOverlay ideamelt">
       <div class="imOModal ideamelt">
         <h1>Welcome to the<br>IdeaMelt demo!</h1>
@@ -80,14 +80,14 @@
       <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext" onclick="melt.wtClose()" style="width: 500px; font-size: 26px; padding: 22px 0px 18px;">Let's bring your site to life!</div></div>
     </div>
 
-    {% endspaceless %}
+
 
     <div id="imHeader" class="top-header ideamelt minwidth">
       <div class="container ideamelt relative">
         <a class="ideamelt" href="http://ideamelt.com/"><h1 class="ir ideamelt header-logo">Idea Melt</h1></a>
         <nav class="top-nav ideamelt">
           <ul>
-          {% spaceless %}
+
           <li>
             <a href="http://ideamelt.com/features" class="ideamelt">FEATURES</a>
           </li>
@@ -103,7 +103,7 @@
           <li>
             <a href="http://dashboard.ideamelt.com" class="ideamelt" target="_blank">LOG IN</a>
           </li>
-          {% endspaceless %}
+
         </ul>
         </nav>
       </div>
@@ -133,7 +133,7 @@
     <div id="toolbar">
       
       <div class="ideamelt imToolbarContainer">
-        {% spaceless %}
+
         <div id="imProfile" class="ideamelt">
           <div id="notifier"></div>
           <div id="echo-auth"></div>
@@ -144,7 +144,7 @@
             <div class="ideamelt melt-ss-cta"></div>
           </div>
         </div>
-        {% endspaceless %}
+
 
 
       </div>
@@ -155,10 +155,10 @@
   
     <div id="imUserModal" class="ideamelt imModalContainer hidden">
       <div id="imUserHeader" class="ideamelt imModalHeader relative">
-        {% spaceless %}
+
         <a data-url="" data-action="follow" class="imHeaderButton ideamelt">Follow</a>
         <a data-close="User" class="imCloseModal ideamelt"></a>
-        {% endspaceless %}
+
       </div>
       <div id="imUserBody" class="ideamelt imModalBody">
         <div style="position: relative;">
@@ -166,11 +166,11 @@
           <div id="imUserTitle"></div>
         </div>
         <div id="imUserSwitch" class="doubleRule ideamelt imSwitchBox">
-          {% spaceless %}
+
           <a data-switch="imUserStream" class="active ideamelt imSwitchButton">User Acitivity</a>
           <a data-switch="imUserFollowees" class="ideamelt imSwitchButton">Following</a>
           <a data-switch="imUserFollowers" class="ideamelt imSwitchButton">User's Followers</a>
-          {% endspaceless %}
+
         </div>
         <div id="imUserFollowers" class="imUserSwitchBox" style="display: none;"></div>
         <div id="imUserFollowees" class="imUserSwitchBox" style="display: none;"></div>
@@ -179,11 +179,11 @@
     </div>
     <div id="imContentModal" class="ideamelt imModalContainer hidden">
       <div id="imContentHeader" class="ideamelt imModalHeader relative">
-        {% spaceless %}
+
         <a data-link="" data-action="like" class="imHeaderButton ideamelt">Like</a>
         <a data-link="" data-action="love" class="imHeaderButton ideamelt">Love</a>
         <a data-close="Content" class="imCloseModal ideamelt"></a>
-        {% endspaceless %}
+
       </div>
       <div id="imContentBody" class="ideamelt imModalBody"></div>
       <div class="doubleRuleDivider"></div>
@@ -469,10 +469,10 @@
             <!--close wideB -->
             
             <div id="imStreamSwitch" class="doubleRule ideamelt imSwitchBox">
-              {% spaceless %}
+
               <a data-switch="eo" class="ideamelt imSwitchButton active">On NYTimes.com</a>
               <a data-switch="fg" class="ideamelt imSwitchButton">Your Friends</a>
-              {% endspaceless %}
+
             </div>
             <div class="imStreamContainer ideamelt">
               <div id="stream"></div>
@@ -588,16 +588,16 @@
               
               <div class="imFriendsLightbox">
               <div id="imFriendsSwitch" class="doubleRule ideamelt imSwitchBox">
-                {% spaceless %}
+
                 <a data-switch="following" class="active ideamelt imSwitchButton">Following</a>
                 <a data-switch="followers" class="ideamelt imSwitchButton">Followers</a>
-                {% endspaceless %}
+
               </div>
               <div class="imFriendsContainer ideamelt relative">
-                {% spaceless %}
+
                 <div id="following" class="imFriendsBox ideamelt"></div>
                 <div id="followers" class="imFriendsBox ideamelt" style="display: none;"></div>
-                {% endspaceless %}
+
               </div>
               <div class="imPeopleTFContainer" id="defaultUsers" style="margin-bottom: 40px;">
               </div>

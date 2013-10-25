@@ -765,7 +765,7 @@
 	display: block;
 	height: 14px;
 	width: 14px;
-	background-image: url('/static/ideamelt/img/close.png');
+	background-image: url('/static/img/close.png');
 	background-size: 14px 14px;
 	background-position: center;
 	position: absolute;
@@ -974,7 +974,7 @@
 #imHeader .ideamelt.header-logo{
 	width: 200px;
 	height: 30px;
-	background-image: url('/static/ideamelt/img/logo-small5.png');
+	background-image: url('/static/img/logo-small5.png');
 	background-repeat: no-repeat;
 	background-position: left top;
 	background-size: auto 30px;

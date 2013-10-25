@@ -494,7 +494,7 @@ melt.sendFollowNotifInternal = function(url) {
 
 melt.streamUserClickHandler = function() {
 	$('#stream, #ticker').on('click','.echo-streamserver-controls-stream-item-plugin-IdeaMeltStreamFull-im-story-container .imstoryactor', function(e) {
-    	var $this = $(this);
+		var $this = $(this);
 		e.preventDefault();
 		e.stopPropagation();
 		var title = $this.text();
