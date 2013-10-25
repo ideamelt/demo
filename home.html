@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <title>The IdeaMelt Times</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/proxinova/proxinova.css">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" height="16" width="16">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/icons.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/base.nytimes.min.css">
+    <link rel="stylesheet" type="text/css" href="http://css.nyt.com/css/0.1/screen/build/homepage/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nytimes.css">
+
+    <script src="/static/js/base.nytimes.min.js"></script>
+    <script type="text/javascript" src="/static/js/echo.min.js"></script>
+    <script type="text/javascript" src="/static/js/ideamelt.min.js"></script>
+
+    <script src="/static/js/lightbox.js"></script>
+
+    <script src="/static/js/nytimes.js"></script>
+
+  </head>
+
+
+
+  <body id="home">
+
+    {% spaceless %}
+    <div class="imOverlay ideamelt">
+      <div class="imOModal ideamelt">
+        <h1>Welcome to the<br>IdeaMelt demo!</h1>
+        <div class="imOMAction imAWT ideamelt" onclick="melt.wtStart();">Walkthrough</div>
+        <div class="imOMAction imADI ideamelt" onclick="melt.diStart();">Dive in!</div>
+      </div>
+    </div>
+
+
+    <div class="ideamelt imWTEnd" onclick="melt.wtClose()" data-icon="&#xf00d;"></div>
+      
+    <div class="imWTBox ideamelt atop textcenter imWT0" style="top: 245px; left: 50%; display: none; margin-left: 219px;">Log in with Single Sign-In.
+      <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext imWTGuest" onclick="melt.wtGuest()">or continue as guest</div></div>
+    </div>
+
+    <div class="imWTBox ideamelt aleft imWT1 textcenter" style="top: 139px; right: 50%; display: none; margin-right: -88px;">You're now logged in.<br>Let's personalize your experience.
+      <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext" onclick="melt.wtNext()">Next</div></div>
+    </div>
+
+    <div class="imWTBox ideamelt aleft imWT2" style="top: 300px; right: 50%; display: none; margin-right: -218px;">You'll see realtime, personalized<br>notifications based on your connections<br>and content preferences here.
+      <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext" onclick="melt.wtNext()">Next</div></div>
+    </div>
+    
+    <div class="imWTBox ideamelt aright imWT3 textright" style="top: 800px; right: 50%; display: none; margin-right: -120px;">That's the SiteTicker.<br>Bring your site to life with realtime,<br>interactive streams of community<br>activity and user interactions.
+      <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext" onclick="melt.wtNext()">Next</div></div>
+    </div>
+    
+    <div class="imWTBox ideamelt aleft imWT4" style="top: 485px; left: 50%; display: none; margin-left: 132px;">You just read an article<br>on Claes Oldenburg
+      <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext" onclick="melt.wtNext()">Next</div></div>
+    </div>
+    
+    <div class="imWTBox ideamelt aright imWT5" style="left: 50%; display: none; margin-left: -150px;">Your activity is dynamically<br>surfaced in the SiteTicker<br>with the IdeaMelt platform
+      <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext" onclick="melt.wtNext()">Next</div></div>
+    </div>
+    
+    <div class="imWTBox ideamelt aright imWT6" style="display: none; top: 540px; right: 50%; margin-right: -128px;">You can follow interesting<br>users or things for a deeply<br>personalized experience
+      <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext" onclick="melt.wtNext()">Next</div></div>
+    </div>
+
+    <div class="imWTBox ideamelt aleft imWT7" style="display: none; top: 281px; left: 50%; margin-left: 100px;">Each user automatically gets<br>their own profile page with<br>activity and friends information
+      <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext" onclick="melt.wtNext()">Next</div></div>
+    </div>
+
+    <div class="imWTBox ideamelt abottom textcenter imWT8" style="display: none; top: 780px; left: 50%; margin-left: -368px;">Your experience is automatically personalized<br>based on what you like, and what you follow
+      <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext" onclick="melt.wtNext()">Next</div></div>
+    </div>
+
+    <div class="imWTBox ideamelt atop imWT9 textcenter" style="display: none; top: 210px; left: 50%; margin-left: -270px;">So what are you waiting for?
+      <div class="ideamelt imControlCont"><div class="ideamelt imWTControl imWTNext" onclick="melt.wtClose()" style="width: 500px; font-size: 26px; padding: 22px 0px 18px;">Let's bring your site to life!</div></div>
+    </div>
+
+    {% endspaceless %}
+
+    <div id="imHeader" class="top-header ideamelt minwidth">
+      <div class="container ideamelt relative">
+        <a class="ideamelt" href="http://ideamelt.com/"><h1 class="ir ideamelt header-logo">Idea Melt</h1></a>
+        <nav class="top-nav ideamelt">
+          <ul>
+          {% spaceless %}
+          <li>
+            <a href="http://ideamelt.com/features" class="ideamelt">FEATURES</a>
+          </li>
+          <li >
+            <a href="http://ideamelt.com/docs" class="ideamelt">DOCS</a>
+          </li>
+          <li>
+            <a href="http://ideamelt.com/demo" class="ideamelt selected">DEMO</a>
+          </li>
+          <li>
+            <a href="http://ideamelt.com/getit" class="getit ideamelt">GET IT!</a>
+          </li>
+          <li>
+            <a href="http://dashboard.ideamelt.com" class="ideamelt" target="_blank">LOG IN</a>
+          </li>
+          {% endspaceless %}
+        </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div id="shell">
+      
+  <div id="page" class="tabContent active">
+
+    <div id="masthead">
+      
+      <img id="mastheadLogo" width="525" height="64" alt="The New York Times" src="/static/img/timt.png"/>
+
+      <a class="imWTButton ideamelt imGetIM" target="_blank" href="/getit" style="display:none;">Get IdeaMelt!</a>
+      <div class="imWTButton ideamelt imWTStart" style="display:none;" onclick="melt.wtStart()">Walkthrough</div>
+      
+      <div id="date">
+        <p>
+          Today
+        </p>
+      </div>
+    </div>
+    <!--end #masthead -->
+
+
+
+    <div id="toolbar">
+      
+      <div class="ideamelt imToolbarContainer">
+        {% spaceless %}
+        <div id="imProfile" class="ideamelt">
+          <div id="notifier"></div>
+          <div id="echo-auth"></div>
+          <div class="ideamelt melt-ss-container clearfix" style="display:none;">
+            <img src='/static/img/google.png' class="ideamelt melt-ss-provider" data-login="google" onclick="melt.auth.triggerFlow('google')"></img>
+            <img src='/static/img/twitter.png' class="ideamelt melt-ss-provider" data-login="twitter" onclick="melt.auth.triggerFlow('twitter')"></img>
+            <img src='/static/img/facebook.png' class="ideamelt melt-ss-provider" data-login="facebook" onclick="melt.auth.triggerFlow('facebook')"></img>
+            <div class="ideamelt melt-ss-cta"></div>
+          </div>
+        </div>
+        {% endspaceless %}
+
+
+      </div>
+      
+    </div>
+  
+  <div id="main" class="relative">
+  
+    <div id="imUserModal" class="ideamelt imModalContainer hidden">
+      <div id="imUserHeader" class="ideamelt imModalHeader relative">
+        {% spaceless %}
+        <a data-url="" data-action="follow" class="imHeaderButton ideamelt">Follow</a>
+        <a data-close="User" class="imCloseModal ideamelt"></a>
+        {% endspaceless %}
+      </div>
+      <div id="imUserBody" class="ideamelt imModalBody">
+        <div style="position: relative;">
+          <div id="imUserAvatar"></div>
+          <div id="imUserTitle"></div>
+        </div>
+        <div id="imUserSwitch" class="doubleRule ideamelt imSwitchBox">
+          {% spaceless %}
+          <a data-switch="imUserStream" class="active ideamelt imSwitchButton">User Acitivity</a>
+          <a data-switch="imUserFollowees" class="ideamelt imSwitchButton">Following</a>
+          <a data-switch="imUserFollowers" class="ideamelt imSwitchButton">User's Followers</a>
+          {% endspaceless %}
+        </div>
+        <div id="imUserFollowers" class="imUserSwitchBox" style="display: none;"></div>
+        <div id="imUserFollowees" class="imUserSwitchBox" style="display: none;"></div>
+        <div id="imUserStream" class="imUserSwitchBox"></div>
+      </div>
+    </div>
+    <div id="imContentModal" class="ideamelt imModalContainer hidden">
+      <div id="imContentHeader" class="ideamelt imModalHeader relative">
+        {% spaceless %}
+        <a data-link="" data-action="like" class="imHeaderButton ideamelt">Like</a>
+        <a data-link="" data-action="love" class="imHeaderButton ideamelt">Love</a>
+        <a data-close="Content" class="imCloseModal ideamelt"></a>
+        {% endspaceless %}
+      </div>
+      <div id="imContentBody" class="ideamelt imModalBody"></div>
+      <div class="doubleRuleDivider"></div>
+      
+    </div>
+    
+
+
+    <div class="baseLayout wrap">
+      
+      <div class="nav column">
+        <div class="hpLeftnav" id="HPLeftNav">
+        <div class="columnGroup fullWidth">
+        <div class="navigationHomeLede">
+        <ul class="flush featured">
+        <li id="navWorld"><a href="http://www.nytimes.com/pages/world/index.html">World</a></li>
+        <li id="navUS"><a href="http://www.nytimes.com/pages/national/index.html">U.S.</a></li>
+        <li id="navPolitics"><a href="http://www.nytimes.com/pages/politics/index.html">Politics</a></li>
+        <li id="navNYRegion"><a href="http://www.nytimes.com/pages/nyregion/index.html">New York</a></li>
+        <li id="navBusiness"><a href="http://www.nytimes.com/pages/business/index.html">Business</a></li>
+        <li id="navDealbook"><a href="http://dealbook.nytimes.com">Dealbook</a></li>
+        <li id="navTechnology"><a href="http://www.nytimes.com/pages/technology/index.html">Technology</a></li>
+        <li id="navSports"><a href="http://www.nytimes.com/pages/sports/index.html">Sports</a></li>
+        <li id="navScience"><a href="http://www.nytimes.com/pages/science/index.html">Science</a></li>
+        <li id="navHealth"><a href="http://www.nytimes.com/pages/health/index.html">Health</a></li>
+        <li id="navArts"><a href="http://www.nytimes.com/pages/arts/index.html">Arts</a></li>
+        <li id="navStyle"><a href="http://www.nytimes.com/pages/style/index.html">Style</a></li>
+        <li id="navOpinion"><a href="http://www.nytimes.com/pages/opinion/index.html">Opinion</a></li>
+        </ul>
+        </div>
+        </div>
+        <div class="columnGroup">
+        <div class="navigationHome">
+        <ul class="flush primary">
+        <li class="firstItem singleRule">
+        <ul class="secondary">
+        <li><a href="http://www.nytimes.com/pages/automobiles/index.html">Autos</a></li>
+        <li><a href="http://www.nytimes.com/ref/topnews/blog-index.html">Blogs</a></li>
+        <li><a href="http://www.nytimes.com/pages/books/index.html">Books</a></li>
+        <li><a href="http://wordplay.blogs.nytimes.com/cartoons/">Cartoons</a></li>
+        <li><a href="http://www.nytimes.com/ref/classifieds/?incamp=hpclassifiedsnav">Classifieds</a></li>
+        <li><a href="http://www.nytimes.com/pages/crosswords/index.html?WT.mc_id=GM-D-I-NYT-TXT-LN-XWRDS-HP-0909-NA">Crosswords</a></li>
+        <li><a href="http://www.nytimes.com/pages/dining/index.html">Dining &amp; Wine</a></li>
+        <li><a href="http://www.nytimes.com/pages/education/index.html">Education</a></li>
+        <li><a href="http://www.nytimes.com/events/">Event Guide</a></li>
+        <li><a href="http://www.nytimes.com/pages/fashion/index.html">Fashion &amp; Style</a></li>
+        <li><a href="http://www.nytimes.com/pages/garden/index.html">Home &amp; Garden</a></li>
+        <li><a href="http://jobmarket.nytimes.com/pages/jobs/">Jobs</a></li>
+        <li><a href="http://www.nytimes.com/pages/magazine/index.html">Magazine</a></li>
+        <li><a href="http://www.nytimes.com/pages/movies/index.html">Movies</a></li>
+        <li><a href="http://www.nytimes.com/pages/arts/music/index.html">Music</a></li>
+        <li><a href="http://www.nytimes.com/pages/obituaries/index.html">Obituaries</a></li>
+        <li><a href="http://www.nytimes.com/top/opinion/thepubliceditor/index.html">Public Editor</a></li>
+        <li><a href="http://www.nytimes.com/pages/realestate/index.html">Real Estate</a></li>
+        <li><a href="http://www.nytimes.com/pages/opinion/index.html#sundayreview">Sunday Review</a></li>
+        <li><a href="http://www.nytimes.com/pages/t-magazine/index.html">T Magazine</a></li>
+        <li><a href="http://www.nytimes.com/pages/arts/television/index.html">Television</a></li>
+        <li><a href="http://www.nytimes.com/pages/theater/index.html">Theater</a></li>
+        <li><a href="http://travel.nytimes.com">Travel</a></li>
+        <li><a href="http://www.nytimes.com/pages/fashion/weddings/index.html">Weddings / Celebrations</a></li>
+        </ul>
+        </li>
+        <li class="singleRule">
+        <h6 class="kickerBd">Multimedia</h6>
+        <ul class="secondary">
+        <li><a href="http://www.nytimes.com/pages/multimedia/index.html">Interactives</a></li>
+        <li><a href="http://lens.blogs.nytimes.com/">Photography</a></li>
+        <li><a href="http://video.nytimes.com/">Video</a></li>
+        </ul>
+        </li>
+        <li class="singleRule">
+        <h6 class="kickerBd">Tools &amp; more</h6>
+        <ul class="secondary">
+        <li><a href="https://myaccount.nytimes.com/mem/tnt.html">Alerts</a></li>
+        <li><a href="http://beta620.nytimes.com/">Beta 620</a></li>
+        <li><a href="http://www.nytimes.com/pages/corrections/index.html">Corrections</a></li>
+        <li><a href="http://www.nytimes.com/nytmobile/">Mobile</a></li>
+        <li><a href="http://movies.nytimes.com/movies/showtimes.html">Movie Tickets</a></li>
+        <li><a href="http://www.nytimes.com/learning/index.html">Learning Network</a></li>
+        <li><a href="http://www.nytimes.com/marketing/newsletters/">Newsletters</a></li>
+        <li><a href="http://nytimes.whsites.net/timestalks/">NYT Events</a></li>
+        <li><a href="http://www.nytimes.com/nytstore/?utm_source=nytimes&amp;utm_medium=HPB&amp;utm_content=services_blk&amp;utm_campaign=NYT-HP">NYT Store</a></li>
+        <li><a href="http://theater.nytimes.com/gst/theater/tabclist.html">Theater Tickets</a></li>
+        <li><a href="http://timesmachine.nytimes.com/">Times Machine</a></li>
+        <li><a href="http://timeslimited.nytimes.com/">TimesLimited</a></li>
+        <li><a href="http://www.nytimes.com/timesskimmer/">Times Skimmer</a></li>
+        <li><a href="http://www.nytimes.com/pages/topics/">Times Topics</a></li>
+        <li><a href="http://www.nytimes.com/timeswire">Times Wire</a></li>
+        </ul>
+        </li>
+        <li class="singleRule">
+        <h6 class="kickerBd">Subscriptions</h6>
+        <ul class="flush secondary multiline">
+        <li><a href="https://nytimesathome.com/hd/205?MediaCode=W31AK&amp;CMP=378R8&amp;SPTR_ID=hdNYT">Home Delivery</a></li>
+        <li><a href="http://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Digital Subscriptions</a></li>
+        <li><a href="http://nytimesathome.com/hd/212?MediaCode=GSIEBL&amp;CMP=3J6HF">Gift Subscriptions</a></li>
+        <li><a href="http://www.nytimes.com/subscriptions/Multiproduct/lp4371.html?campaignId=3937U">Corporate Subscriptions</a></li>
+        <li><a href="http://homedelivery.nytimes.com/HDS/CMHome.do?mode=CMHome&amp;CampaignCode=393W8">Education Rate</a></li>
+        <li><a href="http://www.nytimes.com/pages/crosswords/index.html">Crosswords</a></li>
+        <li><a href="http://homedelivery.nytimes.com/HDS/HDSHome.do?mode=HDSHome">Home Delivery Customer Care</a></li>
+        <li><a href="http://eedition.nytimes.com/cgi-bin/signup.cgi?cc=37FYY">Replica Edition</a></li>
+        <li><a href="http://subs.iht.com">International Herald Tribune</a></li>
+        </ul>
+        </li>
+        <li class="lastItem singleRule">
+        <h6 class="kickerBd">Company info</h6>
+        <ul class="secondary multiline">
+        <li><a href="http://www.nytco.com/">About NYT Co.</a></li>
+        <li><a href="http://www.ihtinfo.com/">About IHT</a></li>
+        <li><a href="http://www.nytimes.whsites.net/mediakit/">Advertise</a></li>
+        </ul>
+        </li>
+        </ul>
+        </div><!--close navigationHome -->
+        </div><!--close columnGroup -->
+        </div>
+      </div>
+      <!--close nav -->
+      
+      <div class="column last">
+        <div class="spanAB">
+          <div class="abColumn">
+
+            <!--start lede package -->
+            
+            <div class="wideB module">
+              <div class="aColumn opening column">
+                <div class="columnGroup first">       
+                <div class="story">
+                <h2><a href="http://www.nytimes.com/2013/04/12/world/asia/north-korea-may-have-nuclear-missile-capability-us-agency-says.html?hp">
+                Pentagon Says Nuclear Missile Is in Grasp for North Korea</a></h2>
+                <h6 class="byline">
+                By THOM SHANKER, DAVID E. SANGER and ERIC SCHMITT        <span class="timestamp" data-eastern-timestamp=" 4:38 PM" data-utc-timestamp="1365712718000"> 4:38 PM ET</span>
+                </h6>
+                <p class="summary">
+                A report by the Pentagon’s intelligence arm concluded North Korea has learned to make a nuclear weapon small enough to be carried by a missile.</p>
+                </div>
+                </div>
+                <div class="columnGroup ">        
+                <div class="story">
+                <h3><a href="http://www.nytimes.com/2013/04/12/us/senate-votes-to-allow-debate-on-gun-bill.html?hp">
+                Senate Vote Clears the Way for Debate on New Gun Laws</a></h3>
+                <h6 class="byline">
+                By JENNIFER STEINHAUER        <span class="timestamp" data-eastern-timestamp=" 2:28 PM" data-utc-timestamp="1365704882000"> 2:28 PM ET</span>
+                </h6>
+                <p class="summary">
+                The threat of a filibuster fell to a 68-31 vote. The Senate next week will consider its first major gun-control legislation in two decades.</p>
+                </div>
+                </div>
+                <div class="columnGroup ">        
+                <style type="text/css"><!--
+                .hideAllKickers h6.kicker { display: none; }
+                --></style>
+                <div class="hideAllKickers story">  <div class="story">
+                <h6 class="kicker">DealBook</h6>
+                <h3><a href="http://dealbook.nytimes.com/2013/04/11/former-kpmg-partner-is-charged-with-insider-trading/?hp">
+                Former Partner at KPMG Charged With Insider Trading</a></h3>
+                <h6 class="byline">
+                By PETER LATTMAN        <span class="timestamp" data-eastern-timestamp=" 4:38 PM" data-utc-timestamp="1365712681000"> 4:38 PM ET</span>
+                </h6>
+                <p class="summary">
+                Federal prosecutors filed charges against Scott London, laying bare a brazen two-year scheme.    </p>
+                </div>
+                </div>  </div>
+                <div class="columnGroup last">        
+                <h6 class="kicker">More News</h6>
+                <div class="story">
+                <ul class="headlinesOnly">
+                <li>
+                <h5><a href="http://www.nytimes.com/2013/04/12/world/europe/turkish-police-say-us-embassy-was-target-of-bomb-plot.html?hp">
+                Turkish Police Say U.S. Embassy Was Bomb Plot Target</a>
+                <span class="timestamp" data-eastern-timestamp=" 3:55 PM" data-utc-timestamp="1365710154000"> 3:55 PM ET</span>
+                </h5>
+                </li>
+                <li>
+                <h5><a href="http://www.nytimes.com/2013/04/12/business/energy-environment/russia-skips-hybrids-in-push-for-natural-gas-cars.html?hp">
+                Russia Skips Hybrids in Push for Natural Gas Cars</a>
+                <span class="timestamp" data-eastern-timestamp=" 2:01 PM" data-utc-timestamp="1365703276000"> 2:01 PM ET</span>
+                </h5>
+                </li>
+                </ul>
+                </div>
+                </div>
+              </div>
+              <!--close aColumn -->
+              <div class="bColumn opening">
+                <div id="photoSpotRegion">
+                  <div class="columnGroup first">
+                    
+                    <div class="story">
+                      <div class="ledePhoto" id="ledePhoto">
+                      <div class="image">
+                      <a href="http://www.nytimes.com/2013/04/12/arts/design/claes-oldenburg-is-subject-of-2-shows-at-moma.html?hp"><img src="http://i1.nyt.com/images/2013/04/12/arts/12OLDENBURG1/12OLDENBURG1-hpMedium-v2.jpg" width="337" height="253" alt="“Claes Oldenburg: The Street and the Store” is installed on the sixth floor of the Museum of Modern Art. Another exhibition, “Claes Oldenburg: Mouse Museum/Ray Gun Wing,” is in the second-floor atrium."></a>
+                      </div>
+                      <h6 class="credit">Suzanne DeChillo/The New York Times</h6>
+                      </div>
+                      <h6 class="kicker">Art Review</h6>
+                      <h3><a href="http://www.nytimes.com/2013/04/12/arts/design/claes-oldenburg-is-subject-of-2-shows-at-moma.html?hp">
+                      Window Shopping With a Pop Patriarch</a></h3>
+                      <h6 class="byline">
+                      By HOLLAND COTTER        <span class="timestamp" data-eastern-timestamp="12:39 PM" data-utc-timestamp="1365698391000"></span>
+                      </h6>
+                      <p class="summary">
+                      No artist cooked up a tastier version of the primal Pop recipe than Claes Oldenburg in the late 1950s and early ’60s, a time explored in two Museum of Modern Art shows.        </p>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="doubleRuleDivider insetH">
+                </div>
+                
+                <div class="columnGroup first">
+                  
+                  <div class = "story">
+                    <h5>
+                      <a href = "http://www.nytimes.com/2013/02/16/us/politics/a-very-junior-senators-bomb-throwing-debut.html?hp">
+                        A Very Junior Senator’s Bomb-Throwing Debut
+                      </a>
+                    </h5>
+                    <div class = "thumbnail runaroundRight" style = "margin-top: 4px">
+                      <a href = "http://www.nytimes.com/2013/02/16/us/politics/a-very-junior-senators-bomb-throwing-debut.html?hp">
+                        <img src = "http://i1.nyt.com/images/2013/02/16/us/16cruz-cnd/16cruz-cnd-thumbStandard-v2.jpg" width = "75" 
+                        height = "75" 
+                        alt = "Senator Ted Cruz entered an elevator on Capitol Hill on Thursday." border = "0" />
+                      </a>
+                    </div>
+                    <h6 class = "byline">
+                      By JONATHAN WEISMAN        
+                      <span class="timestamp" data-eastern-timestamp=" 3:23 PM" data-utc-timestamp="1360959785000">
+                      </span>
+                    </h6>
+                    <p class="summary">
+                      Senator Ted Cruz, Republican of Texas, has made his presence felt in an institution where new arrivals are usually not heard from for months, if not years.    
+                    </p>
+                  </div>
+                  
+                </div>
+                <div class="columnGroup ">
+                  
+                  <div class="story">
+                    <h6 class="kicker">
+                      News Analysis
+                    </h6>
+                    <h5>
+                      <a href="http://www.nytimes.com/2013/02/17/sunday-review/the-hip-replacement-case-shows-why-doctors-often-remain-silent.html?hp">
+                        Why Doctors Remain Silent
+                      </a>
+                    </h5>
+                    <h6 class="byline">
+                      By BARRY MEIER        
+                      <span class="timestamp" data-eastern-timestamp=" 1:30 PM" data-utc-timestamp="1360953010000">
+                      </span>
+                    </h6>
+                    <p class="summary">
+                      While experts say doctors are obligated to warn their peers about bad drugs or devices, they don’t always do so.    
+                    </p>
+                  </div>
+                </div>
+                <div class="columnGroup last">
+                  
+                  <div class="story">
+                    <h6 class="kicker">
+                      Common Sense
+                    </h6>
+                    <h5>
+                      <a href="http://www.nytimes.com/2013/02/16/business/high-taxes-are-not-a-prime-reason-for-relocation-studies-say.html?hp">
+                        The Alluring Myth of the Tax-Fleeing Millionaire
+                      </a>
+                    </h5>
+                    <h6 class="byline">
+                      By JAMES B. STEWART        
+                      <span class="timestamp" data-eastern-timestamp="11:49 AM" data-utc-timestamp="1360946990000">
+                      </span>
+                    </h6>
+                    <p class="summary">
+                      Despite what some say, jobs, cost of housing, family ties and climate tend to be stronger reasons for relocation.    
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--close bColumn -->
+            </div>
+            <!--close wideB -->
+            
+            <div id="imStreamSwitch" class="doubleRule ideamelt imSwitchBox">
+              {% spaceless %}
+              <a data-switch="eo" class="ideamelt imSwitchButton active">On NYTimes.com</a>
+              <a data-switch="fg" class="ideamelt imSwitchButton">Your Friends</a>
+              {% endspaceless %}
+            </div>
+            <div class="imStreamContainer ideamelt">
+              <div id="stream"></div>
+            </div>
+
+            <!--close wideA -->
+            <!--end lede package -->
+            
+          </div>
+          <!--close abColumn -->
+          <div class="cColumn">
+            
+            <div id="cColumnTopSpanRegion">
+              <div class="columnGroup first">
+        
+                <div class="opinionModule">
+                  <div class="subColumn-2 wrap layout ">
+                    <div class="column">
+                      <div class="insetH">
+                        <h4 class="sectionHeaderHome">
+                          <a href="http://www.nytimes.com/pages/opinion/index.html">
+                            <img src="http://graphics8.nytimes.com/images/opinion/homepage/opinionPagesHpC163.png" border="0" />
+                          </a>
+                        </h4>
+                        <h6 class="kicker">
+                          Op-Ed Columnists
+                        </h6>
+                        <ul class="headlinesOnly">
+                          <li>
+                            <a href="http://www.nytimes.com/2013/02/15/opinion/brooks-crayons-to-college.html?hp">
+                              Brooks: Preschool
+                            </a>
+                          </li>
+                          <li>
+                            <a href="http://www.nytimes.com/2013/02/15/opinion/krugman-rubio-and-the-zombies.html?hp">
+                              Krugman: Rubio
+                            </a>
+                          </li>
+                        </ul>
+                        <h6 class="kicker">
+                          More in Opinion
+                        </h6>
+                        <ul class="headlinesOnly">
+                          <li>
+                            <a href="http://www.nytimes.com/2013/02/15/opinion/american-airlines-bulks-up.html?hp">
+                              Editorial: American Airlines Bulks Up
+                            </a>
+                          </li>
+                          <li>
+                            <a href="http://www.nytimes.com/2013/02/19/opinion/nocera-how-not-to-fix-climate-change.html?hp">Nocera: Keystone XL</a>
+                          </li>
+                          <li>
+                            <a href="http://www.nytimes.com/2013/02/19/opinion/global/roger-cohen-the-end-of-foreign-policy.html?hp">Cohen: Obama Diplomacy</a>
+                          </li>
+                          <li>
+                            <a href="http://www.nytimes.com/2013/02/19/opinion/drones-for-america.html?hp">Op-Docs: ‘Drones for America!’</a>
+                          </li>
+                          <li>
+                            <a href="http://www.nytimes.com/2013/02/19/opinion/bruni-the-popes-muffled-voice.html?hp">Bruni: American Catholics</a>
+                          </li>
+                          <li>
+                            <a href="http://www.nytimes.com/2013/02/19/opinion/brooks-what-data-cant-do.html?hp">Brooks: What Data Can’t Do</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="column lastColumn">
+                      <div class="insetH">
+                        <h4 class="sectionHeaderHome">
+                          <a href="http://www.nytimes.com/pages/opinion/index.html#sundayreview">
+                            <img src="http://graphics8.nytimes.com/images/opinion/homepage/sundayReviewHpC163.png" border="0" />
+                          </a>
+                        </h4>
+                        <div class="story">
+                          <h6 class="kicker">
+                            FRANK BRUNI
+                          </h6>
+                          <h5>
+                            <a href="http://www.nytimes.com/2013/02/17/opinion/sunday/ted-cruz-the-gops-nasty-newcomer.html?hp">
+                              The G.O.P.’s Nasty Newcomer
+                            </a>
+                          </h5>
+                          <p class="summary flushBottom">
+                            Ted Cruz typifies the knee-jerk belligerence that blots his party.
+                          </p>
+                        </div>
+                        <div class="story">
+                          <h6 class="kicker">
+                            Gray Matter
+                          </h6>
+                          <h5>
+                            <a href="http://www.nytimes.com/2013/02/17/opinion/sunday/why-we-love-beautiful-things.html?hp">
+                              Why We Love Beautiful Things
+                            </a>
+                          </h5>
+                          <p class="summary flushBottom">
+                            Neuroscience has started to unlock how good design works.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="singleRuleDivider">
+                </div>
+                
+              </div>
+            </div>
+            <!--close cColumnTopSpanRegion -->
+
+            <div class="imMainContainer ideamelt">
+              
+              <div class="imFriendsLightbox">
+              <div id="imFriendsSwitch" class="doubleRule ideamelt imSwitchBox">
+                {% spaceless %}
+                <a data-switch="following" class="active ideamelt imSwitchButton">Following</a>
+                <a data-switch="followers" class="ideamelt imSwitchButton">Followers</a>
+                {% endspaceless %}
+              </div>
+              <div class="imFriendsContainer ideamelt relative">
+                {% spaceless %}
+                <div id="following" class="imFriendsBox ideamelt"></div>
+                <div id="followers" class="imFriendsBox ideamelt" style="display: none;"></div>
+                {% endspaceless %}
+              </div>
+              <div class="imPeopleTFContainer" id="defaultUsers" style="margin-bottom: 40px;">
+              </div>
+              </div>
+              <div class="doubleRule"></div>
+              <div class="imTickerContainer ideamelt">
+                <div id="ticker"></div>
+              </div>
+              
+
+
+            </div>
+            
+          </div>
+          <!--close cColumn -->
+        </div>
+        <!--close spanAB -->
+      </div>
+      <!--close column -->
+    </div>
+    <!--close baseLayout -->
+    <!--start MOTH -->
+    <div id="insideNYTimes" class="hidden doubleRule">
+      <div id="insideNYTimesHeader">
+        <h4>
+          Inside NYTimes.com        
+        </h4>
+      </div>
+      <div id="insideNYTimesScrollWrapper">
+        <table id="insideNYTimesBrowser" cellspacing="0">
+          <tbody>
+            <tr>
+              <td class="first">
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://tmagazine.blogs.nytimes.com/">
+                      T Magazine »
+                    </a>
+                    
+                  </h6>
+                  <div class="mothImage">
+                    <a href="http://tmagazine.blogs.nytimes.com/2013/02/14/the-naked-face/">
+                      <img src="http://i1.nyt.com/images/2013/02/15/t-magazine/15moth-tmag/15moth-tmag-moth.jpg" alt="The Naked Face" width="151" height="151" />
+                    </a>
+                  </div>
+                  <h6 class="headline">
+                    <a href="http://tmagazine.blogs.nytimes.com/2013/02/14/the-naked-face/">
+                      The Naked Face
+                    </a>
+                  </h6>
+                </div>
+              </td>
+              <td>
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://www.nytimes.com/pages/arts/design/index.html">
+                      Art & Design &raquo;
+                    </a>
+                  </h6>
+                  <div class="mothImage">
+                    <a href="http://www.nytimes.com/2013/02/15/arts/design/nyc-1993-exhibition-at-new-museum.html">
+                      <img src="http://i1.nyt.com/images/2013/02/15/arts/design/15MOTH_1993/15MOTH_1993-moth.jpg" alt="A Time of Danger and Pain, Two Decades Ago" width="151" height="151" />
+                    </a>
+                  </div>
+                  <h6 class="headline">
+                    <a href="http://www.nytimes.com/2013/02/15/arts/design/nyc-1993-exhibition-at-new-museum.html">
+                      A Time of Danger and Pain, Two Decades Ago
+                    </a>
+                  </h6>
+                </div>
+              </td>
+              <td>
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://www.nytimes.com/pages/realestate/index.html">
+                      Real Estate &raquo;
+                    </a>
+                  </h6>
+                  <div class="mothImage">
+                    <a href="http://www.nytimes.com/2013/02/17/realestate/a-miami-beach-fla-neighborhood-rises-to-the-height-of-luxury-living-in-just-one-decade.html">
+                      <img src="http://i1.nyt.com/images/2013/02/17/realestate/17MOTH_DEAL/17MOTH_DEAL-moth.jpg" alt="The Quick-Change Artist" width="151" height="151" />
+                    </a>
+                  </div>
+                  <h6 class="headline">
+                    <a href="http://www.nytimes.com/2013/02/17/realestate/a-miami-beach-fla-neighborhood-rises-to-the-height-of-luxury-living-in-just-one-decade.html">
+                      The Quick-Change Artist
+                    </a>
+                  </h6>
+                </div>
+              </td>
+              <td>
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://www.nytimes.com/pages/opinion/index.html">
+                      Opinion »
+                    </a>
+                  </h6>
+                  <h3>
+                    <a href="http://www.nytimes.com/2013/02/15/opinion/suicide-made-easier-with-gun-access-at-home.html">
+                      Editorial: Suicide Made Easier
+                    </a>
+                  </h3>
+                  <p class="summary">
+                    When law-abiding gun owners don’t have foolproof controls at home, their families may be at risk.
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://www.nytimes.com/pages/opinion/index.html">
+                      Opinion »
+                    </a>
+                    
+                  </h6>
+                  <div class="mothImage">
+                    <a href="http://www.nytimes.com/2013/02/15/opinion/meditations-on-the-legacy-of-pope-benedict-xvi.html">
+                      <img src="http://i1.nyt.com/images/2013/02/15/opinion/15MOTH-LETTERS/15MOTH-LETTERS-moth.jpg" alt="Letters: Meditations on the Legacy of a Pope" width="151" height="151" />
+                    </a>
+                  </div>
+                  <h6 class="headline">
+                    <a href="http://www.nytimes.com/2013/02/15/opinion/meditations-on-the-legacy-of-pope-benedict-xvi.html">
+                      Letters: Meditations on the Legacy of a Pope
+                    </a>
+                  </h6>
+                </div>
+              </td>
+              <td>
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://www.nytimes.com/pages/arts/television/index.html">
+                      Television &raquo;
+                    </a>
+                  </h6>
+                  <div class="mothImage">
+                    <a href="http://tv.nytimes.com/2013/02/15/arts/television/beyonces-documentary-life-is-but-a-dream-on-hbo.html">
+                      <img src="http://i1.nyt.com/images/2013/02/15/arts/television/15MOTH_BEYONCE/15MOTH_BEYONCE-moth.jpg" alt="Beyonc&eacute;&rsquo;s Documentary, &lsquo;Life Is but a Dream&rsquo;" width="151" height="151" />
+                    </a>
+                  </div>
+                  <h6 class="headline">
+                    <a href="http://tv.nytimes.com/2013/02/15/arts/television/beyonces-documentary-life-is-but-a-dream-on-hbo.html">
+                      Beyonc&eacute;&rsquo;s Documentary, &lsquo;Life Is but a Dream&rsquo;
+                    </a>
+                  </h6>
+                </div>
+              </td>
+              <td class="hidden">
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://www.nytimes.com/pages/books/index.html">
+                      Books &raquo;
+                    </a>
+                  </h6>
+                  <div class="mothImage">
+                    <a href="http://www.nytimes.com/2013/02/15/books/my-brothers-book-by-maurice-sendak.html">
+                      <span class="img" src="http://i1.nyt.com/images/2013/02/15/books/15MOTH_BOOKSENDAK/15MOTH_BOOKSENDAK-moth.jpg" alt="&lsquo;My Brother&rsquo;s Book,&rsquo; by Maurice Sendak" width="151" height="151" />
+                    </a>
+                  </div>
+                  <h6 class="headline">
+                    <a href="http://www.nytimes.com/2013/02/15/books/my-brothers-book-by-maurice-sendak.html">
+                      &lsquo;My Brother&rsquo;s Book,&rsquo; by Maurice Sendak
+                    </a>
+                  </h6>
+                </div>
+              </td>
+              <td class="hidden">
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://www.nytimes.com/pages/travel/index.html">
+                      Travel &raquo;
+                    </a>
+                  </h6>
+                  <div class="mothImage">
+                    <a href="http://travel.nytimes.com/2013/02/17/travel/36-hours-in-melbourne-australia.html">
+                      <span class="img" src="http://i1.nyt.com/images/2013/02/17/travel/17MOTH_HOURS/17MOTH_HOURS-moth.jpg" alt="36 Hours in Melbourne, Australia" width="151" height="151" />
+                    </a>
+                  </div>
+                  <h6 class="headline">
+                    <a href="http://travel.nytimes.com/2013/02/17/travel/36-hours-in-melbourne-australia.html">
+                      36 Hours in Melbourne, Australia
+                    </a>
+                  </h6>
+                </div>
+              </td>
+              <td class="hidden">
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://www.nytimes.com/pages/health/index.html">
+                      Health »
+                    </a>
+                    
+                  </h6>
+                  <div class="mothImage">
+                    <a href="http://well.blogs.nytimes.com/2013/02/14/fat-dad-baking-for-love-2/">
+                      <span class="img" src="http://i1.nyt.com/images/2013/02/15/health/15MOTH_health/15MOTH_health-moth.jpg" alt="Fat Dad: Baking for Love" width="151" height="151" />
+                    </a>
+                  </div>
+                  <h6 class="headline">
+                    <a href="http://well.blogs.nytimes.com/2013/02/14/fat-dad-baking-for-love-2/">
+                      Fat Dad: Baking for Love
+                    </a>
+                  </h6>
+                </div>
+              </td>
+              <td class="hidden">
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://www.nytimes.com/pages/opinion/index.html">
+                      Opinion »
+                    </a>
+                  </h6>
+                  <h3>
+                    <a href="http://www.nytimes.com/roomfordebate/2013/02/14/think-like-a-pope-knowing-when-to-quit/">
+                      Knowing When to Quit: The Pope Did It. We Can Too.
+                    </a>
+                  </h3>
+                  <p class="summary">
+                    Room for Debate asks: What are the signs that it’s time to stop working, stop therapy, stop dieting?
+                  </p>
+                </div>
+              </td>
+              <td class="hidden">
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://theater.nytimes.com/pages/theater/index.html">
+                      Theater &raquo;
+                    </a>
+                  </h6>
+                  <div class="mothImage">
+                    <a href="http://theater.nytimes.com/2013/02/15/theater/reviews/the-laramie-project-at-bams-harvey-theater.html">
+                      <span class="img" src="http://i1.nyt.com/images/2013/02/15/theater/15MOTH_LARAMIE/15MOTH_LARAMIE-moth.jpg" alt="&lsquo;The Laramie Project&rsquo; at BAM&rsquo;s Harvey Theater" width="151" height="151" />
+                    </a>
+                  </div>
+                  <h6 class="headline">
+                    <a href="http://theater.nytimes.com/2013/02/15/theater/reviews/the-laramie-project-at-bams-harvey-theater.html">
+                      &lsquo;The Laramie Project&rsquo; at BAM&rsquo;s Harvey Theater
+                    </a>
+                  </h6>
+                </div>
+              </td>
+              <td class="hidden">
+                <div class="story">
+                  <h6 class="kicker">
+                    <a href="http://www.nytimes.com/pages/opinion/index.html">
+                      Opinion »
+                    </a>
+                    
+                  </h6>
+                  <div class="mothImage">
+                    <a href="http://opinionator.blogs.nytimes.com/2013/02/13/a-heartbroken-temp-at-brides-com/">
+                      <span class="img" src="http://i1.nyt.com/images/2013/02/15/opinion/15MOTH-OPINIONATOR/15MOTH-OPINIONATOR-moth.jpg" alt="Townies: A Heartbroken Temp at Brides.com" width="151" height="151" />
+                    </a>
+                  </div>
+                  <h6 class="headline">
+                    <a href="http://opinionator.blogs.nytimes.com/2013/02/13/a-heartbroken-temp-at-brides-com/">
+                      Townies: A Heartbroken Temp at Brides.com
+                    </a>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--end #insideNYTimes -->
+    <!--end MOTH -->
+    <!--close baseLayout -->
+  </div>
+  <!--close main -->
+  <footer class="pageFooter">
+    <div class="inset">
+      <nav class="pageFooterNav">
+        <ul class="pageFooterNavList wrap">
+          <li class="firstItem">
+            <a href="http://www.nytco.com/">
+              &copy; 2013 The New York Times Company
+            </a>
+          </li>
+          <li>
+            <a href="http://spiderbites.nytimes.com/">
+              Site Map
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nytimes.com/privacy">
+              Privacy
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nytimes.com/ref/membercenter/help/privacy.html#pp">
+              Your Ad Choices
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nytimes.whsites.net/mediakit/">
+              Advertise
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nytimes.com/content/help/rights/sale/terms-of-sale.html ">
+              Terms of Sale
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nytimes.com/ref/membercenter/help/agree.html">
+              Terms of Service
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nytco.com/careers">
+              Work With Us
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nytimes.com/rss">
+              RSS
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nytimes.com/membercenter/sitehelp.html">
+              Help
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">
+              Contact Us
+            </a>
+          </li>
+          <li class="lastItem">
+            <a href="/membercenter/feedback.html">
+              Site Feedback
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!--close inset -->
+  </footer>
+  <!--close pageFooter -->
+  </div>
+  <!--close page -->
+  </div>
+  <!--close shell -->
+
+  </body>
+</html>
+

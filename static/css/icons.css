@@ -1,0 +1,189 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-quill, .icon-bullhorn, .icon-wand, .icon-stack, .icon-cart, .icon-signal, .icon-key, .icon-rocket, .icon-thunder, .icon-remove, .icon-location, .icon-chat, .icon-credit, .icon-network, .icon-bolt, .icon-trophy, .icon-thumbs-up, .icon-paperplane, .icon-group, .icon-infinity, .icon-coin, .icon-target, .icon-star, .icon-angle-left, .icon-angle-right, .icon-mobile, .icon-link, .icon-fighter-jet, .icon-shield, .icon-brush, .icon-light-bulb, .icon-code, .icon-tools, .icon-cog, .icon-vcard, .icon-lock-open, .icon-suitcase, .icon-download-alt, .icon-export, .icon-beaker, .icon-newspaper, .icon-cart-2, .icon-bug, .icon-fire, .icon-lab, .icon-brightness-medium, .icon-sign-blank, .icon-user, .icon-th-large, .icon-check-empty {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-quill:before {
+	content: "\e000";
+}
+.icon-bullhorn:before {
+	content: "\e002";
+}
+.icon-wand:before {
+	content: "\e004";
+}
+.icon-stack:before {
+	content: "\e005";
+}
+.icon-cart:before {
+	content: "\e001";
+}
+.icon-signal:before {
+	content: "\f012";
+}
+.icon-key:before {
+	content: "\e007";
+}
+.icon-rocket:before {
+	content: "\e008";
+}
+.icon-thunder:before {
+	content: "\e006";
+}
+.icon-remove:before {
+	content: "\f00d";
+}
+.icon-location:before {
+	content: "\e003";
+}
+.icon-chat:before {
+	content: "\e00a";
+}
+.icon-credit:before {
+	content: "\e00c";
+}
+.icon-network:before {
+	content: "\e00d";
+}
+.icon-bolt:before {
+	content: "\e00e";
+}
+.icon-trophy:before {
+	content: "\f091";
+}
+.icon-thumbs-up:before {
+	content: "\e00f";
+}
+.icon-paperplane:before {
+	content: "\e010";
+}
+.icon-group:before {
+	content: "\f0c0";
+}
+.icon-infinity:before {
+	content: "\e009";
+}
+.icon-coin:before {
+	content: "\e011";
+}
+.icon-target:before {
+	content: "\e00b";
+}
+.icon-star:before {
+	content: "\f005";
+}
+.icon-angle-left:before {
+	content: "\f104";
+}
+.icon-angle-right:before {
+	content: "\f105";
+}
+.icon-mobile:before {
+	content: "\e012";
+}
+.icon-link:before {
+	content: "\e013";
+}
+.icon-fighter-jet:before {
+	content: "\f0fb";
+}
+.icon-shield:before {
+	content: "\e014";
+}
+.icon-brush:before {
+	content: "\e015";
+}
+.icon-light-bulb:before {
+	content: "\e016";
+}
+.icon-code:before {
+	content: "\e017";
+}
+.icon-tools:before {
+	content: "\e018";
+}
+.icon-cog:before {
+	content: "\e019";
+}
+.icon-vcard:before {
+	content: "\e01b";
+}
+.icon-lock-open:before {
+	content: "\e01c";
+}
+.icon-suitcase:before {
+	content: "\e01a";
+}
+.icon-download-alt:before {
+	content: "\f019";
+}
+.icon-export:before {
+	content: "\e01d";
+}
+.icon-beaker:before {
+	content: "\f0c3";
+}
+.icon-newspaper:before {
+	content: "\e01e";
+}
+.icon-cart-2:before {
+	content: "\e01f";
+}
+.icon-bug:before {
+	content: "\e020";
+}
+.icon-fire:before {
+	content: "\e021";
+}
+.icon-lab:before {
+	content: "\e022";
+}
+.icon-brightness-medium:before {
+	content: "\e023";
+}
+.icon-sign-blank:before {
+	content: "\f0c8";
+}
+.icon-user:before {
+	content: "\f007";
+}
+.icon-th-large:before {
+	content: "\f009";
+}
+.icon-check-empty:before {
+	content: "\f096";
+}

@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "ProximaNova-Regular";
+    src: url("234D5B_1F_0.eot");
+    src: url("234D5B_1F_0.eot?#iefix") format("embedded-opentype"),
+    url("234D5B_1F_0.woff") format("woff"),
+    url("234D5B_1F_0.ttf") format("truetype")
+}
+
+/*
+@font - face {
+    font - family: "ProximaNova-ThinIt";
+    src: url("234D5B_20_0.eot");
+    src: url("234D5B_20_0.eot?#iefix") format("embedded-opentype"),
+    url("234D5B_20_0.woff") format("woff"),
+    url("234D5B_20_0.ttf") format("truetype")
+}
+*/
+
+@font-face {
+    font-family: "ProximaNova-Semibold";
+    src: url("234D5B_22_0.eot");
+    src: url("234D5B_22_0.eot?#iefix") format("embedded-opentype"),
+    url("234D5B_22_0.woff") format("woff"),
+    url("234D5B_22_0.ttf") format("truetype")
+}
+
+/*
+@font - face {
+    font - family: "ProximaNova-BoldIt";
+    src: url("234D5B_23_0.eot");
+    src: url("234D5B_23_0.eot?#iefix") format("embedded-opentype"),
+    url("234D5B_23_0.woff") format("woff"),
+    url("234D5B_23_0.ttf") format("truetype")
+}
+
+@font - face {
+    font - family: "ProximaNova-LightIt";
+    src: url("234D5B_24_0.eot");
+    src: url("234D5B_24_0.eot?#iefix") format("embedded-opentype"),
+    url("234D5B_24_0.woff") format("woff"),
+    url("234D5B_24_0.ttf") format("truetype")
+}
+
+@font - face {
+    font - family: "ProximaNova-SemiboldIt";
+    src: url("234D5B_26_0.eot");
+    src: url("234D5B_26_0.eot?#iefix") format("embedded-opentype"),
+    url("234D5B_26_0.woff") format("woff"),
+    url("234D5B_26_0.ttf") format("truetype")
+}
+*/
+
+@font-face {
+    font-family: "ProximaNova-Light";
+    src: url("234D5B_27_0.eot");
+    src: url("234D5B_27_0.eot?#iefix") format("embedded-opentype"),
+    url("234D5B_27_0.woff") format("woff"),
+    url("234D5B_27_0.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "ProximaNova-Bold";
+    src: url("234D5B_28_0.eot");
+    src: url("234D5B_28_0.eot?#iefix") format("embedded-opentype"),
+    url("234D5B_28_0.woff") format("woff"),
+    url("234D5B_28_0.ttf") format("truetype")
+}
